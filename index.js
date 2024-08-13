@@ -1,26 +1,33 @@
-// const slider = document.querySelector(".card-list");
-// const prevButton = document.querySelector(".prev");
-// const nextButton = document.querySelector(".next");
+// script.js
+let slideIndex = 0;
 
-// let currentIndex = 0;
+function showSlide(index) {
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
 
-// function updateSliderPosition() {
-//   const cardWidth = slider.querySelector(".card-item").clientWidth;
-//   slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-// }
+  if (index >= slides.length) {
+    slideIndex = 0;
+  } else if (index < 0) {
+    slideIndex = slides.length - 1;
+  } else {
+    slideIndex = index;
+  }
 
-// prevButton.addEventListener("click", () => {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//     updateSliderPosition();
-//   }
-// });
+  const offset = -slideIndex * 100;
+  document.querySelector(".slides").style.transform = `translateX(${offset}%)`;
 
-// nextButton.addEventListener("click", () => {
-//   if (currentIndex < slider.children.length - 1) {
-//     currentIndex++;
-//     updateSliderPosition();
-//   }
-// });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === slideIndex);
+  });
+}
 
-// window.addEventListener("resize", updateSliderPosition);
+function moveSlide(step) {
+  showSlide(slideIndex + step);
+}
+
+function currentSlide(index) {
+  showSlide(index);
+}
+
+// Initialize the slider
+showSlide(slideIndex);

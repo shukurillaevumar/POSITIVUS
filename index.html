@@ -4,11 +4,6 @@
     <title>POSITIVUS</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <nav>
@@ -491,102 +486,92 @@
       </p>
     </div>
 
-    <div class="testimonials-container">
-      <div class="card-list">
-        <div class="card-container">
-          <div class="card-item">
+    <div class="testimonial-slider">
+      <div class="slides">
+        <div class="slide">
+          <blockquote>
             <p>
-              We have been working with Positivus for the past year <br />
-              and have seen a significant increase in website traffic <br />
-              and leads as a result of their efforts. The team is <br />
-              professional, responsive, and truly cares about the <br />
-              success of our business. We highly recommend Positivus <br />
-              to any company looking to grow their online presence.
+              "We have been working with Positivus for the past year and have
+              seen a significant increase in website traffic and leads as a
+              result of their efforts. The team is professional, responsive, and
+              truly cares about the success of our business. We highly recommend
+              Positivus to any company looking to grow their online presence."
             </p>
-          </div>
-
-          <div class="card-author-inf">
-            <p class="author">John Smith</p>
-            <p class="occupation">Marketing Director at XYZ Corp</p>
+          </blockquote>
+          <div class="card-bot-part">
+            <strong>John Smith</strong><br />
+            Marketing Director at XYZ Corp
           </div>
         </div>
-
-        <div class="card-container">
-          <div class="card-item">
+        <div class="slide">
+          <blockquote>
             <p>
-              We have been working with Positivus for the past year <br />
-              and have seen a significant increase in website traffic <br />
-              and leads as a result of their efforts. The team is <br />
-              professional, responsive, and truly cares about the <br />
-              success of our business. We highly recommend Positivus <br />
-              to any company looking to grow their online presence.
+              "We have been working with Positivus for the past year and have
+              seen a significant increase in website traffic and leads as a
+              result of their efforts. The team is professional, responsive, and
+              truly cares about the success of our business. We highly recommend
+              Positivus to any company looking to grow their online presence."
             </p>
-          </div>
-
-          <div class="card-author-inf">
-            <p class="author">John Smith</p>
-            <p class="occupation">Marketing Director at XYZ Corp</p>
+          </blockquote>
+          <div class="card-bot-part">
+            <strong>John Smith</strong><br />
+            Marketing Director at XYZ Corp
           </div>
         </div>
-
-        <div class="card-container">
-          <div class="card-item">
+        <div class="slide">
+          <blockquote>
             <p>
-              We have been working with Positivus for the past year <br />
-              and have seen a significant increase in website traffic <br />
-              and leads as a result of their efforts. The team is <br />
-              professional, responsive, and truly cares about the <br />
-              success of our business. We highly recommend Positivus <br />
-              to any company looking to grow their online presence.
+              "We have been working with Positivus for the past year and have
+              seen a significant increase in website traffic and leads as a
+              result of their efforts. The team is professional, responsive, and
+              truly cares about the success of our business. We highly recommend
+              Positivus to any company looking to grow their online presence."
             </p>
-          </div>
-
-          <div class="card-author-inf">
-            <p class="author">John Smith</p>
-            <p class="occupation">Marketing Director at XYZ Corp</p>
+          </blockquote>
+          <div class="card-bot-part">
+            <strong>John Smith</strong><br />
+            Marketing Director at XYZ Corp
           </div>
         </div>
-
-        <div class="card-container">
-          <div class="card-item">
+        <div class="slide">
+          <blockquote>
             <p>
-              We have been working with Positivus for the past year <br />
-              and have seen a significant increase in website traffic <br />
-              and leads as a result of their efforts. The team is <br />
-              professional, responsive, and truly cares about the <br />
-              success of our business. We highly recommend Positivus <br />
-              to any company looking to grow their online presence.
+              "Positivus has played a crucial role in boosting our digital
+              marketing strategies. Their expertise and dedication have resulted
+              in measurable improvements across the board. The level of service
+              and commitment we received from the team has been outstanding."
             </p>
-          </div>
-
-          <div class="card-author-inf">
-            <p class="author">John Smith</p>
-            <p class="occupation">Marketing Director at XYZ Corp</p>
+          </blockquote>
+          <div class="card-bot-part">
+            <strong>John Smith</strong><br />
+            Marketing Director at XYZ Corp
           </div>
         </div>
-
-        <div class="card-container">
-          <div class="card-item">
+        <div class="slide">
+          <blockquote>
             <p>
-              We have been working with Positivus for the past year <br />
-              and have seen a significant increase in website traffic <br />
-              and leads as a result of their efforts. The team is <br />
-              professional, responsive, and truly cares about the <br />
-              success of our business. We highly recommend Positivus <br />
-              to any company looking to grow their online presence.
+              "Working with Positivus has been a game-changer for our business.
+              Their tailored approach to our specific needs has led to increased
+              engagement and conversions. The team’s ability to deliver results
+              while maintaining excellent communication sets them apart."
             </p>
-          </div>
-
-          <div class="card-author-inf">
-            <p class="author">John Smith</p>
-            <p class="occupation">Marketing Director at XYZ Corp</p>
+          </blockquote>
+          <div class="card-bot-part">
+            <strong>John Smith</strong><br />
+            Marketing Director at XYZ Corp
           </div>
         </div>
       </div>
-
       <div class="navigation">
-        <div class="prev">❮</div>
-        <div class="next">❯</div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div>
+          <span class="dot" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
       </div>
     </div>
 

@@ -661,68 +661,65 @@ main .left button:hover {
 
 /* testimonials-container CSS */
 
-.testimonials-container {
-  background-color: #191a23;
-  border-radius: 45px;
-  padding: 2rem;
-  position: relative;
+.testimonial-slider {
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
+  border-radius: 20px;
+  background-color: #1b1b1b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
 }
 
-.card-container {
+.slides {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.card-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
   transition: transform 0.5s ease-in-out;
 }
 
-.card-list .card-item {
+.slide {
   min-width: 100%;
-  border: 1px solid #b9ff66;
-  border-radius: 45px;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
-.card-container .card-item p {
+blockquote {
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid #7eca43;
+  color: #e5e5e5;
+  max-width: 40%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Adjusted to move the triangle to the left side */
+blockquote:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 30px; /* Adjust this value to position the triangle horizontally */
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #7eca43 transparent transparent transparent;
+}
+
+.card-bot-part {
   color: white;
-}
-
-.card-author-inf {
-  line-height: 10px;
-}
-
-.card-author-inf .author {
-  color: #b9ff66;
-  font-size: 1.25rem;
-}
-
-.card-author-inf .occupation {
-  color: white;
-  font-size: 1.125rem;
 }
 
 .prev,
 .next {
-  padding: 2rem;
+  background-color: transparent;
+  border: transparent;
   color: white;
-  border: none;
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -730,6 +727,26 @@ main .left button:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s;
+}
+
+.dot:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #7eca43;
 }
 
 /* contact CSS */
